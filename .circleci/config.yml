@@ -1,10 +1,8 @@
 version: 2.1
 
 commands:
-   # Exercise - Rollback
-   destroy_environment:
-    docker:
-      - image: amazon/aws-cli
+  # Exercise - Rollback
+  destroy_environment:
     steps:
       - run:
           name: Destroy environment
@@ -31,7 +29,7 @@ jobs:
   # Exercise: Smoke Testing
   smoke_test:
     docker:
-      - image: alpine:latest
+      - image: amazon/aws-cli
     steps:
       - run:
           name: Test job
